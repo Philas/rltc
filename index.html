@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restore Lithuanian Citizenship by Descent | Litvak Support</title>
     <meta name="description" content="Official assistance for descendants of Lithuanian citizens and Litvaks. We help locate ancestral documents and guide you through the EU passport process.">
+    
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,7 @@
     <style>
         :root {
             --primary: #1a2b49;
-            --accent: #c5a059;
+            --accent: #9e7a3a;
             --bg: #f8f9fa;
             --white: #ffffff;
         }
@@ -53,7 +54,7 @@
             padding: 120px 5%;
             text-align: center;
             background: linear-gradient(rgba(26, 43, 73, 0.85), rgba(26, 43, 73, 0.85)),
-            url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80'); /* Vilnius Old Town Aerial */
+            url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -100,6 +101,14 @@
             margin: auto;
         }
 
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -114,7 +123,7 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-
+        
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -122,8 +131,9 @@
 
         .card i {
             font-size: 40px;
-            color: var(--accent);
+            color: #c5a059;
             margin-bottom: 20px;
+            display: block;
         }
 
         .card h3 {
@@ -143,21 +153,14 @@
         }
 
         .litvak-text { flex: 1; min-width: 300px; }
-        .litvak-img { 
-            flex: 1; min-width: 300px; 
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        .litvak-img img { width: 100%; display: block; }
-
+        .litvak-img { flex: 1; min-width: 300px; border-radius: 10px; overflow: hidden; }
+        
         .form-container {
             background: var(--white);
-            border: 1px solid #eee;
             padding: 40px;
             border-radius: 12px;
             max-width: 600px;
-            margin: 40px auto 0;
+            margin: 0 auto;
             box-shadow: 0 15px 50px rgba(0,0,0,0.05);
         }
 
@@ -167,7 +170,6 @@
             margin: 12px 0;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-family: inherit;
             box-sizing: border-box;
         }
 
@@ -180,20 +182,17 @@
             font-weight: 600;
             cursor: pointer;
             border-radius: 4px;
-            font-size: 1rem;
-            transition: background 0.3s;
         }
-
-        button:hover { background: #253d66; }
 
         .faq-item {
             margin-bottom: 30px;
             border-bottom: 1px solid #eee;
             padding-bottom: 20px;
         }
-
-        .faq-item i { color: var(--accent); margin-right: 10px; }
+        
+        .faq-item i { color: #c5a059; margin-right: 10px; }
         i { font-display: swap; }
+
         footer {
             background: var(--primary);
             color: var(--white);
@@ -207,82 +206,82 @@
             gap: 40px;
             margin-top: 40px;
             opacity: 0.6;
-            filter: grayscale(1);
         }
 
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
-            .hero { padding: 80px 5%; }
         }
     </style>
 </head>
-
 <body>
 
 <header>
     <a href="#" class="logo">
         <i class="fas fa-landmark"></i> Restore LT Citizenship
     </a>
-    <div style="color:var(--primary); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
-    </div>
 </header>
 
-<section class="hero">
-    <h1>Restore Lithuanian Citizenship by Descent</h1>
-    <p>If your parents, grandparents or great-grandparents were Lithuanian citizens, you may qualify for an EU passport. We help locate the required documents and guide your application.</p>
-    <a class="cta" href="#eligibility">Start Free Assessment</a>
-</section>
-<div style="background:#fff; padding:20px; text-align:center; font-weight:600;">
-✔️ Ancestors from Lithuania before 1940  
-✔️ No documents? We help find them  
-✔️ Worldwide clients (US, Israel, South Africa)
-</div>
-<section class="section grid">
-    <div class="card">
-        <i class="fas fa-file-signature"></i>
-        <h3>Application Support</h3>
-        <p>Expert guidance through the entire restoration process, ensuring your evidence meets the strict requirements of the Migration Department.</p>
+<main>
+    <section class="hero">
+        <h1>Restore Lithuanian Citizenship by Descent</h1>
+        <p>If your parents, grandparents or great-grandparents were Lithuanian citizens, you may qualify for an EU passport. We help locate the required documents and guide your application.</p>
+        <a class="cta" href="#eligibility">Start Free Assessment</a>
+    </section>
+
+    <div style="background:#fff; padding:20px; text-align:center; font-weight:600; border-bottom: 1px solid #eee;">
+        ✔️ Ancestors from Lithuania before 1940&nbsp;&nbsp;
+        ✔️ Worldwide clients (USA, Israel, South Africa, UK, Canada, Australia)&nbsp;&nbsp;
+        ✔️ No documents? We help find them!
     </div>
 
-    <div class="card">
-        <i class="fas fa-search-location"></i>
-        <h3>Global Archives</h3>
-        <p>Specialized research across Lithuanian and international archives to find birth, marriage, and residence records from the 1918-1940 period.</p>
-    </div>
+    <section class="section">
+    <h2>Citizenship Restoration Services</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-file-signature"></i>
+                <h3>Application Support</h3>
+                <p>Expert guidance through the entire restoration process, ensuring your evidence meets the strict requirements of the Migration Department.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-search-location"></i>
+                <h3>Global Archives</h3>
+                <p>Specialized research across Lithuanian and international archives to find birth, marriage, and residence records from the 1918-1940 period.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-star-of-david"></i>
+                <h3>Litvak Diaspora</h3>
+                <p>Dedicated expertise for descendants of those who fled during the interwar period or the Holocaust. We understand your unique history.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-        <i class="fas fa-star-of-david"></i>
-        <h3>Litvak Diaspora</h3>
-        <p>Dedicated expertise for descendants of those who fled during the interwar period or the Holocaust. We understand your unique history.</p>
-    </div>
-</section>
+    <section class="litvak-split">
+        <div class="litvak-text">
+            <h2 style="text-align:left;">Justice for Generations</h2>
+            <p style="font-size: 1.1rem; color: #555;">Lithuanian citizenship laws are designed to help families who were forced to leave restore their connection to the country. Today, an EU passport is more than a document—it is a return to your roots and a gateway to Europe.</p>
+        </div>
+        <div class="litvak-img">
+            <img src="https://images.unsplash.com/photo-1580501170888-80668882ca0c?auto=format&fit=crop&w=650&q=75" 
+                 alt="Historical records of Lithuanian ancestors" 
+                 width="600" height="400" style="width:100%; height:auto; display:block;">
+        </div>
+    </section>
 
-<section class="litvak-split">
-    <div class="litvak-text">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary);">Justice for Generations</h2>
-        <p style="font-size: 1.1rem; color: #555;">Lithuanian citizenship laws are designed to help families who were forced to leave restore their connection to the country. Today, an EU passport is more than a document—it is a return to your roots and a gateway to Europe.</p>
-    </div>
-    <div class="litvak-img">
-        <img src="https://images.unsplash.com/photo-1580501170888-80668882ca0c?auto=format&fit=crop&w=800&q=80" alt="Old Documents">
-    </div>
-</section>
+    <section class="section" id="eligibility">
+        <h2>Free Eligibility Review</h2>
+        <p style="text-align:center; color: #666; margin-bottom: 40px;">Free eligibility check — response within 24 hours.</p>
+        <div class="form-container">
+            <form action="https://nextsteps.lt/contacts/" method="GET">
+                <input type="text" name="your-name" placeholder="Full Name" aria-label="Full Name" required>
+                <input type="email" name="your-email" placeholder="Email Address" aria-label="Email Address" required>
+                <textarea name="your-message" rows="6" placeholder="Which ancestor was born in Lithuania? Do you have their name or documents?" aria-label="Message"></textarea>
+                <button type="submit">CHECK MY ELIGIBILITY</button>
+            </form>
+        </div>
+    </section>
 
-<section class="section" id="eligibility">
-    <h2 style="text-align:center; font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary);">Free Eligibility Review</h2>
-    <p style="text-align:center; color: #666; margin-bottom: 40px;">Free eligibility check — response within 24 hours.</p>
-
-    <div class="form-container">
-        <form action="https://nextsteps.lt/contacts/" method="GET">
-            <input type="text" name="your-name" placeholder="Full Name" required>
-            <input type="email" name="your-email" placeholder="Email Address" required>
-            <textarea name="your-message" rows="5" placeholder="Which ancestor was born in Lithuania? Do you have their name or documents?"></textarea>
-            <button type="submit">Check My Eligibility</button>
-        </form>
-    </div>
-</section>
-
-<section class="section">
-    <h2 style="text-align:center; font-family: 'Playfair Display', serif; margin-bottom: 50px;">Common Questions</h2>
+    <section class="section">
+        <h2>Common Questions</h2>
     <div style="max-width: 800px; margin: auto;">
         <div class="faq-item">
             <p><b><i class="fas fa-question-circle"></i> Who qualifies for restoration?</b><br>
@@ -297,19 +296,19 @@
             Our core strength is archival research. We find the records in the Lithuanian and international archives so you don't have to.</p>
         </div>
     </div>
-</section>
+    </section>
+</main>
 
 <footer>
     <div class="logo" style="color: white; justify-content: center; margin-bottom: 20px;">
         <i class="fas fa-landmark"></i> Restore LT Citizenship
     </div>
-    <p style="margin-top:15px; opacity:0.8;">
-Trusted by clients across the US, Israel, and Europe
-</p>
-    <p>RestoreLithuanianCitizenship.com © <span id="year"></span> </p>
+    <p>Trusted by clients across the USA, Israel, South Africa, UK, Canada, Australia and more</p>
+    <p>RestoreLithuanianCitizenship.com © 2016-<span id="year"></span></p>
     <div class="trust-icons">
-        <i class="fas fa-university fa-2x"></i>
-        <i class="fas fa-eu-flag fa-2x"></i> <i class="fas fa-shield-alt fa-2x"></i>
+        <i class="fas fa-university fa-2x" aria-hidden="true"></i>
+        <i class="fas fa-globe fa-2x" aria-hidden="true"></i>
+        <i class="fas fa-shield-alt fa-2x" aria-hidden="true"></i>
     </div>
 </footer>
 
