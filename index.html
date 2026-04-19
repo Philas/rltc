@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restore Lithuanian Citizenship by Descent | Litvak Support</title>
     <meta name="description" content="Official assistance for descendants of Lithuanian citizens and Litvaks. We help locate ancestral documents and guide you through the EU passport process.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="image" href="/images/citizenship-restoration-services.webp">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -115,7 +116,14 @@
             <p style="font-size: 1.1rem; color: #555;">Lithuanian citizenship laws are designed to help families who were forced to leave restore their connection to the country. Today, an EU passport is more than a document—it is a return to your roots and a gateway to Europe.</p>
         </div>
         <div class="litvak-img">
-            <img src="./images/citizenship-restoration-services.jpg" 
+			<img src="/images/citizenship-restoration-services.jpg" alt="Historical records of Lithuanian ancestors" width="600" height="400">
+
+<img src="/images/citizenship-restoration-services.webp" 
+     alt="Historical records of Lithuanian ancestors" 
+     width="600" height="400" 
+     style="width:100%; height:auto; display:block;"
+     fetchpriority="high">
+            <img src="/images/citizenship-restoration-services.jpg" 
                  alt="Historical records of Lithuanian ancestors" 
                  width="600" height="400" style="width:100%; height:auto; display:block;">
         </div>
@@ -196,6 +204,6 @@
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
 </script>
-<script src="/script/send-me.js"></script>
+<script src="/script/send-me.js" defer>></script>
 </body>
 </html>
