@@ -1,6 +1,21 @@
+window.addEventListener('scroll', function() {
+    const stickyBar = document.getElementById('sticky-container');
+    const formSection = document.getElementById('eligibility');
+    
+    if (!stickyBar || !formSection) return;
+
+    // Gauname formos poziciją ekrane
+    const rect = formSection.getBoundingClientRect();
+    
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+        stickyBar.style.transform = 'translateY(100%)';
+    } else {
+        stickyBar.style.transform = 'translateY(0)';
+    }
+});
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
-  if (!form) return; // jei puslapyje nėra formos
+  if (!form) return; 
 
   const status = document.getElementById("status");
 
