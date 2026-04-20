@@ -1,587 +1,302 @@
- :root {
-
+:root {
     --primary: #1a2b49;
-
     --accent: #9e7a3a;
-
-    --icon-gold: #c5a059; /* Tavo pasirinkta šviesesnė spalva */
-
+    --icon-gold: #c5a059;
     --bg: #f8f9fa;
-
     --white: #ffffff;
-
 }
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
-
 
 body {
-
     margin: 0;
-
     font-family: 'Inter', sans-serif;
-
     color: #333;
-
     line-height: 1.6;
-
 }
 
-
-/* --- Navigacija --- */
-
+/* --- Navigation --- */
 header {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     padding: 15px 5%;
-
     background: var(--white);
-
     position: sticky;
-
     top: 0;
-
     box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-
     z-index: 999;
-
 }
-
 
 .logo {
-
     font-family: 'Playfair Display', serif;
-
     font-size: 22px;
-
     font-weight: 700;
-
     color: var(--primary);
-
     text-decoration: none;
-
     display: flex;
-
     align-items: center;
-
     gap: 10px;
-
 }
-
 
 nav {
-
     display: flex;
-
     gap: 15px;
-
 }
-
 
 nav a {
-
     text-decoration: none;
-
     color: var(--primary);
-
     font-weight: 600;
-
     font-size: 13px;
-
     text-transform: uppercase;
-
     letter-spacing: 0.5px;
-
     padding: 8px 12px;
-
     border-radius: 4px;
-
     transition: all 0.3s ease;
-
 }
-
 
 nav a:hover {
-
     background: var(--bg);
-
     color: var(--accent);
-
 }
 
-
-/* --- Hero --- */
-
+/* --- Hero Section --- */
 .hero {
-
     padding: 120px 5%;
-
     text-align: center;
-
-    background: url('./images/reinstatement-Lithuanian-citizenship.jpg');
-
-    /*background: linear-gradient(rgba(26, 43, 73, 0.85), rgba(26, 43, 73, 0.85)),
-
-    url('./images/reinstatement-Lithuanian-citizenship.jpg');*/
-
+    background: linear-gradient(rgba(26, 43, 73, 0.75), rgba(26, 43, 73, 0.75)), 
+                url('./images/reinstatement-Lithuanian-citizenship.jpg');
     background-size: cover;
-
     background-position: center;
-
     color: white;
-
 }
-
 
 h1 {
-
     font-family: 'Playfair Display', serif;
-
     font-size: 3.5rem;
-
     max-width: 900px;
-
     margin: 0 auto 25px;
-
     line-height: 1.2;
-
 }
-
 
 .hero p {
-
     font-size: 1.2rem;
-
     max-width: 700px;
-
     margin: 0 auto 35px;
-
     opacity: 0.9;
-
 }
 
-
-/* --- CTA --- */
-
+/* --- CTA Buttons --- */
 .cta {
-
     display: inline-block;
-
     background: var(--accent);
-
     color: var(--white);
-
     padding: 18px 40px;
-
     text-decoration: none;
-
     font-weight: 600;
-
     border-radius: 4px;
-
     transition: all 0.3s ease;
-
     text-transform: uppercase;
-
     letter-spacing: 1px;
-
     box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
-
 }
-
 
 .cta:hover {
-
     background: #b38f48;
-
     transform: translateY(-2px);
-
     box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
-
 }
 
-
-/* --- Sekcijos ir Grid --- */
-
+/* --- Grid & Layout --- */
 .section {
-
     padding: 80px 5%;
-
     max-width: 1200px;
-
     margin: auto;
-
 }
-
 
 h2 {
-
     font-family: 'Playfair Display', serif;
-
     font-size: 2.5rem;
-
     color: var(--primary);
-
     text-align: center;
-
     margin-bottom: 40px;
-
 }
-
 
 .grid {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
     gap: 30px;
-
 }
-
 
 .card {
-
     background: var(--white);
-
     border: 1px solid #f0f0f0;
-
     padding: 40px 30px;
-
     border-radius: 8px;
-
     text-align: center;
-
     transition: all 0.3s ease;
-
 }
-
 
 .card:hover {
-
     transform: translateY(-5px);
-
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
 }
-
 
 .card i {
-
     font-size: 40px;
-
     color: var(--icon-gold);
-
     margin-bottom: 20px;
-
     display: block;
-
 }
-
 
 .card h3 {
-
     color: var(--primary);
-
     font-family: 'Playfair Display', serif;
-
     font-size: 1.5rem;
-
     margin-bottom: 15px;
-
 }
-
 
 .card a {
-
     color: var(--accent);
-
     text-decoration: none;
-
     font-weight: 600;
-
     display: inline-block;
-
     margin-top: 10px;
-
 }
 
-
-/* --- Specialūs blokai --- */
-
+/* --- Content Blocks --- */
 .litvak-split {
-
     background: var(--bg);
-
     display: flex;
-
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 50px;
-
     padding: 100px 5%;
-
 }
-
 
 .litvak-text { flex: 1; min-width: 300px; }
-
 .litvak-img { flex: 1; min-width: 300px; border-radius: 10px; overflow: hidden; }
 
-
-/* --- Formos --- */
-
+/* --- Forms --- */
 .form-container {
-
     background: var(--white);
-
     padding: 40px;
-
     border-radius: 12px;
-
     max-width: 600px;
-
     margin: 0 auto;
-
     box-shadow: 0 15px 50px rgba(0,0,0,0.05);
-
 }
-
 
 input, textarea {
-
     width: 100%;
-
     padding: 15px;
-
     margin: 12px 0;
-
     border: 1px solid #ddd;
-
     border-radius: 4px;
-
     box-sizing: border-box;
-
+    font-family: inherit;
 }
-
 
 button {
-
     width: 100%;
-
     padding: 18px;
-
     background: var(--primary);
-
     color: var(--white);
-
     border: none;
-
     font-weight: 600;
-
     cursor: pointer;
-
     border-radius: 4px;
-
     text-transform: uppercase;
-
+    transition: opacity 0.3s;
 }
 
+button:hover {
+    opacity: 0.9;
+}
 
 /* --- FAQ --- */
-
 .faq-item {
-
     margin-bottom: 30px;
-
     border-bottom: 1px solid #eee;
-
     padding-bottom: 20px;
-
 }
 
-
-.faq-item i { color: var(--icon-gold); margin-right: 10px; }
-
+.faq-item i { 
+    color: var(--icon-gold); 
+    margin-right: 10px; 
+}
 
 /* --- Footer --- */
-
 footer {
-
     background: var(--primary);
-
     color: var(--white);
-
     text-align: center;
-
     padding: 60px 5%;
-
 }
-
-.mobile-sticky-cta {
-
-    display: none;
-
-}
-
-
-@media screen and (max-width: 768px) {
-
-    .mobile-sticky-cta {
-
-        display: block;
-
-        position: fixed;
-
-        bottom: 0;
-
-        left: 0;
-
-        width: 100%;
-
-        background: #c5a059;
-
-        color: #fff;
-
-        text-align: center;
-
-        padding: 18px;
-
-        font-weight: bold;
-
-        text-decoration: none;
-
-        z-index: 9999;
-
-        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-
-        font-family: 'Inter', sans-serif;
-
-        letter-spacing: 1px;
-
-    }
-
-}
-
 
 .trust-icons {
-
     display: flex;
-
     justify-content: center;
-
     gap: 40px;
-
     margin-top: 40px;
-
     opacity: 0.6;
-
 }
 
-
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-
     h1 { font-size: 2.5rem; }
-
     header { flex-direction: column; gap: 15px; }
-
     nav { flex-wrap: wrap; justify-content: center; gap: 10px; }
-
     
-
-    .mobile-sticky-bar {
-
-        display: block;
-
-        position: fixed;
-
-        bottom: 0;
-
-        left: 0;
-
-        width: 100%;
-
-        background: #1a2b49; /* Tamsiai mėlyna juosta */
-
-        padding: 12px 20px;
-
-        box-sizing: border-box;
-
-        z-index: 9999;
-
-        box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
-
-        transition: transform 0.3s ease; /* Sklandžiam atsiradimui/išnykimui */
-
-    }
-
-
-    .sticky-cta-button {
-
-        display: block;
-
-        background: #c5a059; /* Auksinis mygtukas */
-
-        color: #fff;
-
-        text-align: center;
-
-        padding: 14px;
-
-        border-radius: 8px; /* Užapvalinti kampai, kad išsiskirtų */
-
-        font-weight: bold;
-
-        text-decoration: none;
-
-        font-family: 'Inter', sans-serif;
-
-        letter-spacing: 1px;
-
-        font-size: 14px;
-
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px !important;
     }
 
     footer {
-
         padding-bottom: 100px !important;
-
     }
 
-}
-
-
-@media screen and (max-width: 768px) {
-
-    input[type="text"],
-
-    input[type="email"],
-
-    input[type="textarea"],
-
-    textarea {
-
-        font-size: 16px !important;
-
+    .mobile-sticky-bar {
+        display: block !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        padding: 12px 20px;
+        box-sizing: border-box;
+        z-index: 9999;
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
     }
 
+    .sticky-cta-button {
+        display: block;
+        background: var(--icon-gold);
+        color: #fff;
+        text-align: center;
+        padding: 14px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .hidden-bar {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+    }
 }
 
-
-.mobile-sticky-bar {
-
-    display: none;
-
-} 
+@media screen and (min-width: 769px) {
+    .mobile-sticky-bar {
+        display: none !important;
+    }
+}
