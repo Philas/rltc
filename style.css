@@ -1,7 +1,7 @@
 :root {
     --primary: #1a2b49;
     --accent: #9e7a3a;
-    --icon-gold: #c5a059; /* Tavo pasirinkta šviesesnė spalva */
+    --icon-gold: #c5a059;
     --bg: #f8f9fa;
     --white: #ffffff;
 }
@@ -17,7 +17,6 @@ body {
     line-height: 1.6;
 }
 
-/* --- Navigacija --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -67,9 +66,8 @@ nav a:hover {
 .hero {
     padding: 120px 5%;
     text-align: center;
-    background: url('./images/reinstatement-Lithuanian-citizenship.jpg');
-    /*background: linear-gradient(rgba(26, 43, 73, 0.85), rgba(26, 43, 73, 0.85)),
-    url('./images/reinstatement-Lithuanian-citizenship.jpg');*/
+    background: linear-gradient(rgba(26, 43, 73, 0.7), rgba(26, 43, 73, 0.7)), 
+                url('./images/reinstatement-Lithuanian-citizenship.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -111,7 +109,6 @@ h1 {
     box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
 }
 
-/* --- Sekcijos ir Grid --- */
 .section {
     padding: 80px 5%;
     max-width: 1200px;
@@ -160,28 +157,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-.card a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-/* --- Specialūs blokai --- */
-.litvak-split {
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 100px 5%;
-}
-
-.litvak-text { flex: 1; min-width: 300px; }
-.litvak-img { flex: 1; min-width: 300px; border-radius: 10px; overflow: hidden; }
-
-/* --- Formos --- */
 .form-container {
     background: var(--white);
     padding: 40px;
@@ -198,6 +173,7 @@ input, textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 button {
@@ -210,50 +186,65 @@ button {
     cursor: pointer;
     border-radius: 4px;
     text-transform: uppercase;
+    transition: opacity 0.3s;
 }
 
-/* --- FAQ --- */
-.faq-item {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-}
+button:hover { opacity: 0.9; }
 
-.faq-item i { color: var(--icon-gold); margin-right: 10px; }
-
-/* --- Footer --- */
-footer {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 60px 5%;
-}
-.mobile-sticky-cta {
+.mobile-sticky-bar {
     display: none;
-}
 
 @media screen and (max-width: 768px) {
-    .mobile-sticky-cta {
+    h1 { font-size: 2.2rem; }
+    header { flex-direction: column; gap: 15px; padding: 10px; }
+    nav { gap: 8px; }
+    nav a { font-size: 11px; padding: 5px 8px; }
+
+    .mobile-sticky-bar {
         display: block;
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        background: #c5a059;
+        background: var(--primary);
+        padding: 12px 20px;
+        box-sizing: border-box;
+        z-index: 9999;
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .sticky-cta-button {
+        display: block;
+        background: var(--icon-gold);
         color: #fff;
         text-align: center;
-        padding: 18px;
+        padding: 14px;
+        border-radius: 8px;
         font-weight: bold;
         text-decoration: none;
-        z-index: 9999;
-        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        font-family: 'Inter', sans-serif;
         letter-spacing: 1px;
+        font-size: 14px;
     }
 
     footer {
-        padding-bottom: 80px;
+        padding-bottom: 100px !important;
     }
+
+    /* iOS Zoom fix */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* --- Footer & Misc --- */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 5%;
 }
 
 .trust-icons {
@@ -262,19 +253,4 @@ footer {
     gap: 40px;
     margin-top: 40px;
     opacity: 0.6;
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    header { flex-direction: column; gap: 15px; }
-    nav { flex-wrap: wrap; justify-content: center; gap: 10px; }
-}
-
-@media screen and (max-width: 768px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="textarea"],
-    textarea {
-        font-size: 16px !important;
-    }
 }
