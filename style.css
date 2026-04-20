@@ -293,6 +293,9 @@ footer {
         visibility: hidden;
         transform: translateY(100%);
     }
+    #eligibility {
+    scroll-margin-top: 100px;
+}
 }
 
 @media screen and (min-width: 769px) {
