@@ -21,21 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', checkVisibility);
         checkVisibility();
     }
-
     const form = document.getElementById("contact-form");
     if (form) {
         const status = document.getElementById("status");
-        const timeField = form.querySelector("[name=form_time]");
-
-        if (timeField) {
-            timeField.value = Date.now();
-        }
+        
+        const updateTime = () => {
+            const timeField = form.querySelector("[name=form_time]");
+            if (timeField) timeField.value = Date.now();
+        };
+        updateTime(); // Nustatom laiką iškart užkrovus
 
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-            if (status) status.textContent = "Sending...";
+            if (status) {
+                status.textContent = "Sending...";
+                status.style.color = "var(--primary)";
+            }
 
             const fd = new FormData(form);
+            
             const data = {
                 name: fd.get("your-name"),
                 email: fd.get("your-email"),
@@ -54,14 +58,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 const r = await res.json();
 
                 if (r.success) {
-                    form.innerHTML = "<h3 style='color: var(--primary);'>Thank you! We will contact you shortly.</h3>";
+                    form.innerHTML = "<div style='padding: 20px; background: #eafaf1; border-radius: 8px;'><h3 style='color: #27ae60; margin: 0;'>Thank you!</h3><p>Your inquiry has been sent successfully. We will contact you shortly.</p></div>";
                     if (stickyBar) stickyBar.style.display = 'none';
                 } else {
-                    if (status) status.textContent = "Something went wrong. Please try again.";
+                    // ČIA parodom tikrą klaidą iš PHP (pvz. "Too many requests")
+                    if (status) {
+                        status.textContent = r.error || "Something went wrong. Please try again.";
+                        status.style.color = "#c0392b";
+                    }
                 }
             } catch (err) {
-                if (status) status.textContent = "Network error. Please check your connection.";
+                if (status) {
+                    status.textContent = "Network error. Please check your connection.";
+                    status.style.color = "#c0392b";
+                }
             }
         });
     }
-});
