@@ -279,7 +279,7 @@ footer {
 
     .sticky-cta-button {
         display: block;
-        background: var(--icon-gold);
+        background: var(--accent);
         color: #fff;
         text-align: center;
         padding: 14px;
