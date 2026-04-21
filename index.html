@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
-    <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
     {
@@ -117,6 +116,9 @@
         </div>
         <div class="litvak-img">
 	<img src="/images/citizenship-restoration-services.webp" 
+     srcset="/images/citizenship-restoration-services-mobile.webp 600w, 
+             /images/citizenship-restoration-services.webp 1200w"
+     sizes="(max-width: 600px) 600px, 1200px"
      alt="Historical records of Lithuanian ancestors" 
      width="600" height="400" 
      style="width:100%; height:auto; display:block;"
@@ -202,6 +204,7 @@
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
 </script>
+<link rel="stylesheet" href="style.css">
 <script src="/script/send-me.js" defer>></script>
 </body>
 </html>
