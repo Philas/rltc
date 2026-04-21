@@ -78,18 +78,6 @@ nav a:hover {
     color: var(--accent);
 }
 
-/* --- Hero Section --- 
-.hero {
-    padding: 120px 5%;
-    text-align: center;
-    background: linear-gradient(rgba(26, 43, 73, 0.75), rgba(26, 43, 73, 0.75)), 
-                url('./images/reinstatement-Lithuanian-citizenship.jpg');
-    background-size: cover;
-    background-position: center; 
-    
-    color: white;
-}*/
-/* Hero konteineris dabar turi būti pozicionuojamas santykinai */
 .hero {
     position: relative;
     overflow: hidden;
@@ -293,6 +281,9 @@ footer {
     h1 { font-size: 2.5rem; }
     header { flex-direction: column; gap: 15px; }
     nav { flex-wrap: wrap; justify-content: center; gap: 10px; }
+	.hero {
+    min-height: 90vh;
+	}
     .grid {
         grid-template-columns: 1fr !important;
     }
