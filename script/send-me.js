@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
 
-        stickyBtn.addEventListener('click', () => {
-            stickyBar.classList.add('hidden-bar');
-        });
+        if (stickyBtn) {
+            stickyBtn.addEventListener('click', () => {
+                stickyBar.classList.add('hidden-bar');
+            });
+        }
 
         window.addEventListener('scroll', checkVisibility);
         checkVisibility();
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const r = await res.json();
 
                 if (r.success) {
-                    form.innerHTML = "<div style='padding: 20px; background: #eafaf1; border-radius: 8px;'><h3 style='color: #27ae60; margin: 0;'>Thank you!</h3><p>Your inquiry has been sent successfully. We will contact you shortly.</p></div>";
+                    form.innerHTML = "<div style='padding: 20px; background: #eafaf1; border-radius: 8px;text-align: center;'><h3 style='color: #27ae60; margin: 0;'>Thank you!</h3><p>Your inquiry has been sent successfully. We will contact you shortly.</p></div>";
                     if (stickyBar) stickyBar.style.display = 'none';
                 } else {
                     // ČIA parodom tikrą klaidą iš PHP (pvz. "Too many requests")
